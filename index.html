@@ -1,1 +1,178 @@
-<!DOCTYPE html><html lang="ru"><head>  <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- /.css -->  <link rel="stylesheet" href="css/style.min.css">  <!-- /.js -->  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>  <script defer src="js/jquery.mask.min.js"></script>  <script defer src="js/jquery.validate.min.js"></script>  <script defer src="js/script.min.js"></script>  <!-- /.favicon -->  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">  <link rel="icon" href="img/favicon.ico" type="image/x-icon">  <title>Герика бизнес сувениры</title></head><body>  <section class="header">    <div class="container">      <div class="header__block">        <div class="up header__block-up">          <a href="index.html" class="up__logo"><picture><source srcset="img/Logo.webp" type="image/webp"><img src="img/Logo.png" alt="Логотип"></picture></a>          <div class="contacts up__contacts">            <div class="contacts__phone"><a href="tel:+71234567890"><picture><source srcset="img/phone.webp" type="image/webp"><img src="img/phone.png" alt="Телефон"></picture>                <span class="contacts__phone-mobile">+7 (812)<span class="greenlable">123-45-67</span></span></a></div>            <div class="contacts__message"><picture><source srcset="img/message.webp" type="image/webp"><img src="img/message.png" alt="Сообщение"></picture><a                href="mailto:ger@mail.ru">ger@mail.ru</a></div>            <div class="contacts__download">              <h1 class="contacts__download-title">Скачать презентацию:</h1>              <div class="contacts__download-text">                <picture><source srcset="img/pdf.webp" type="image/webp"><img src="img/pdf.png" alt="Файл для скачивания"></picture><a href="#">Наша презентация</a>              </div>            </div>          </div>        </div>        <!-- /.menu__up -->        <div class="down header__block-down">          <div class="menu down__menu">            <nav class="nav menu__nav">              <button class="nav__close"></button>              <ul class="burgermenu" id="burgermenu">                <li><a href="#card" class="nav__item">Главная</a></li>                <li><a href="#newitems" class="nav__item">Новинки</a></li>                <li><a href="#requisites" class="nav__item">Реквизиты</a></li>                <li><a href="#reviews" class="nav__item">Отзывы</a></li>                <li><a href="#contacts" class="nav__item">Контакты</a></li>              </ul>              <div class="contacts__message contacts__message-mobile"><picture><source srcset="img/message.webp" type="image/webp"><img src="img/message.png" alt="Сообщение"></picture><a                  href="mailto:ger@mail.ru">ger@mail.ru</a></div>              <div class="contacts__download contacts__download-mobile">                <h1 class="contacts__download-title">Скачать презентацию:</h1>                <div class="contacts__download-text">                  <picture><source srcset="img/pdf.webp" type="image/webp"><img src="img/pdf.png" alt="Файл для скачивания"></picture><a href="#">Наша презентация</a>                </div>              </div>            </nav>            <!-- Кнопка для мобильной навигации -->            <div id="menu-togle" class="menu-icon">              <div class="menu-icon-line"></div>            </div>            <div class="menu__title">Меню</div>          </div>          <!-- /.menu__down -->          <div class="down__input">            <input type="text" placeholder="Что будем искать?" class="input down__input-input">            <button type="submit" class="btn down__input-btn"><picture><source srcset="img/search.webp" type="image/webp"><img src="img/search.png" alt="Поиск"></picture></button>          </div>          <!-- /.down__input -->          <div class="question down__question">            <a href="#" class="question__title">              <picture><source srcset="img/question.webp" type="image/webp"><img src="img/question.png" alt="Вопрос"></picture>              <span class="question__title-title">Задать вопрос</span>            </a>          </div>          <!-- /.down__question -->        </div>      </div>      <!-- /.menu -->    </div>  </section>  <!-- /.header -->  <section class="main" id="requisites">    <div class="container">      <h1 class="main__title">Реквизиты</h1>      <div class="card main__card">        <div class="card__title">Реквизиты</div>        <table class="table">          <tr class="greenrow">            <td class="table__text">Полное наименование юридического лица с указанием ОПФ</td>            <td class="table__text">Общество с ограниченной ответственностью "Тест"</td>          </tr>          <tr>            <td class="table__text">Сокращенное наименование юридического лица</td>            <td class="table__text">ООО "Тест"</td>          </tr>          <tr class="greenrow">            <td class="table__text">Юридический адрес</td>            <td class="table__text">196247, Санкт-Петербург, ул. Рубинштейна, 24</td>          </tr>        </table>        <form action="sendQuestion.php" method="POST" class="form card__form">          <div class="form__block">            <h1 class="form__title">Задать вопрос</h1>            <div class="input-group card__input-group">              <input type="text" name="userName" class="input form__input form__input-name" id="card-user-name"                placeholder="Ваше имя " maxlength="15" />              <input type="tel" name="userPhone" class="input form__input form__input-phone" id="card-user-phone"                placeholder="Телефон" />              <input type="email" autocomplete="off" name="userEmail" class="input form__input form__input-email"                id="card-user-email" placeholder="E-maill" maxlength="30" />            </div>            <div class="input-group card__input-group">              <input type="text" autocomplete="off" name="userMessage" class="input form__input form__input-message"                id="card-user-message" placeholder="Cообщение" maxlength="150" />            </div>            <button class="btn btn-green card__btn">              Отправить вопрос            </button>            <!-- /.button button-rimary card__button -->          </div>        </form>        <!-- /.form card__form -->      </div>    </div>  </section>  <!-- /.card -->  <!-- Модальне окно благодарности -->  <div class="modalSend">    <div class="modalSend__dialog">      <button class="modalSend__close"></button>      <div class="modalSend__content">        <h3 class="modalSend__header">          Спасибо за заявку.<br />Наш менеджер перезвонит Вам в течение 15          минут. <br />        </h3>      </div>    </div>  </div>  <div class="buttonUp">    <span id="button-up">      <picture><source srcset="img/arrow-up_icon-icons.com_73669.svg" type="image/webp"><img src="img/arrow-up_icon-icons.com_73669.svg" alt="Наверх" /></picture>    </span>  </div></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- /.css -->
+  <link rel="stylesheet" href="css/style.min.css">
+  <!-- /.js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script defer src="js/jquery.mask.min.js"></script>
+  <script defer src="js/jquery.validate.min.js"></script>
+  <script defer src="js/script.min.js"></script>
+  <!-- /.favicon -->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>Герика бизнес сувениры</title>
+</head>
+
+<body>
+  <section class="header">
+    <div class="container">
+      <div class="header__block">
+        <div class="up header__block-up">
+          <a href="index.html" class="up__logo">
+            <picture>
+              <source srcset="../img/Logo.webp" type="image/webp"><img src="../img/Logo.png" alt="Логотип"></picture>
+          </a>
+          <div class="contacts up__contacts">
+            <div class="contacts__phone"><a href="tel:+71234567890">
+                <picture>
+                  <source srcset="img/phone.webp" type="image/webp"><img src="img/phone.png" alt="Телефон"></picture>
+                <span class="contacts__phone-mobile">+7 (812)<span class="greenlable">123-45-67</span></span>
+              </a></div>
+            <div class="contacts__message">
+              <picture>
+                <source srcset="img/message.webp" type="image/webp"><img src="img/message.png" alt="Сообщение">
+              </picture><a href="mailto:ger@mail.ru">ger@mail.ru</a>
+            </div>
+            <div class="contacts__download">
+              <h1 class="contacts__download-title">Скачать презентацию:</h1>
+              <div class="contacts__download-text">
+                <picture>
+                  <source srcset="img/pdf.webp" type="image/webp"><img src="img/pdf.png" alt="Файл для скачивания">
+                </picture><a href="#">Наша презентация</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.menu__up -->
+        <div class="down header__block-down">
+          <div class="menu down__menu">
+            <nav class="nav menu__nav">
+              <button class="nav__close"></button>
+
+              <ul class="burgermenu" id="burgermenu">
+                <li><a href="#card" class="nav__item">Главная</a></li>
+                <li><a href="#newitems" class="nav__item">Новинки</a></li>
+                <li><a href="#requisites" class="nav__item">Реквизиты</a></li>
+                <li><a href="#reviews" class="nav__item">Отзывы</a></li>
+                <li><a href="#contacts" class="nav__item">Контакты</a></li>
+              </ul>
+
+              <div class="contacts__message contacts__message-mobile">
+                <picture>
+                  <source srcset="img/message.webp" type="image/webp"><img src="img/message.png" alt="Сообщение">
+                </picture><a href="mailto:ger@mail.ru">ger@mail.ru</a>
+              </div>
+              <div class="contacts__download contacts__download-mobile">
+                <h1 class="contacts__download-title">Скачать презентацию:</h1>
+                <div class="contacts__download-text">
+                  <picture>
+                    <source srcset="img/pdf.webp" type="image/webp"><img src="img/pdf.png" alt="Файл для скачивания">
+                  </picture><a href="#">Наша презентация</a>
+                </div>
+              </div>
+            </nav>
+            <!-- Кнопка для мобильной навигации -->
+            <div id="menu-togle" class="menu-icon">
+              <div class="menu-icon-line"></div>
+            </div>
+            <div class="menu__title">Меню</div>
+          </div>
+          <!-- /.menu__down -->
+          <div class="down__input">
+            <input type="text" placeholder="Что будем искать?" class="input down__input-input">
+            <button type="submit" class="btn down__input-btn">
+              <picture>
+                <source srcset="img/search.webp" type="image/webp"><img src="img/search.png" alt="Поиск"></picture>
+            </button>
+          </div>
+          <!-- /.down__input -->
+          <div class="question down__question">
+            <a href="#" class="question__title">
+              <picture>
+                <source srcset="img/question.webp" type="image/webp"><img src="img/question.png" alt="Вопрос"></picture>
+              <span class="question__title-title">Задать вопрос</span>
+            </a>
+          </div>
+          <!-- /.down__question -->
+
+        </div>
+
+      </div>
+      <!-- /.menu -->
+    </div>
+  </section>
+  <!-- /.header -->
+  <section class="main" id="requisites">
+    <div class="container">
+      <h1 class="main__title">Реквизиты</h1>
+      <div class="card main__card">
+        <div class="card__title">Реквизиты</div>
+        <table class="table">
+          <tr class="greenrow">
+            <td class="table__text">Полное наименование юридического лица с указанием ОПФ</td>
+            <td class="table__text">Общество с ограниченной ответственностью "Тест"</td>
+          </tr>
+          <tr>
+            <td class="table__text">Сокращенное наименование юридического лица</td>
+            <td class="table__text">ООО "Тест"</td>
+          </tr>
+          <tr class="greenrow">
+            <td class="table__text">Юридический адрес</td>
+            <td class="table__text">196247, Санкт-Петербург, ул. Рубинштейна, 24</td>
+          </tr>
+        </table>
+
+        <form action="sendQuestion.php" method="POST" class="form card__form">
+          <div class="form__block">
+            <h1 class="form__title">Задать вопрос</h1>
+            <div class="input-group card__input-group">
+              <input type="text" name="userName" class="input form__input form__input-name" id="card-user-name"
+                placeholder="Ваше имя " maxlength="15" />
+              <input type="tel" name="userPhone" class="input form__input form__input-phone" id="card-user-phone"
+                placeholder="Телефон" />
+              <input type="email" autocomplete="off" name="userEmail" class="input form__input form__input-email"
+                id="card-user-email" placeholder="E-maill" maxlength="30" />
+            </div>
+            <div class="input-group card__input-group">
+              <input type="text" autocomplete="off" name="userMessage" class="input form__input form__input-message"
+                id="card-user-message" placeholder="Cообщение" maxlength="150" />
+            </div>
+            <button class="btn btn-green card__btn">
+              Отправить вопрос
+            </button>
+            <!-- /.button button-rimary card__button -->
+
+          </div>
+        </form>
+        <!-- /.form card__form -->
+
+      </div>
+    </div>
+  </section>
+  <!-- /.card -->
+  <!-- Модальне окно благодарности -->
+  <div class="modalSend">
+    <div class="modalSend__dialog">
+      <button class="modalSend__close"></button>
+      <div class="modalSend__content">
+        <h3 class="modalSend__header">
+          Спасибо за заявку.<br />Наш менеджер перезвонит Вам в течение 15
+          минут. <br />
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="buttonUp">
+    <span id="button-up">
+      <picture>
+        <source srcset="img/arrow-up_icon-icons.com_73669.svg" type="image/webp"><img
+          src="img/arrow-up_icon-icons.com_73669.svg" alt="Наверх" /></picture>
+    </span>
+  </div>
+</body>
+
+</html>
